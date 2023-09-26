@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour
     public float scrollspeed;
 
     public GameObject alertPrefab;
+
+    private float nextMessageTime;
+
+    public string[] newDayMessages;
+    public string[] MmocMessages;
+    public string[] GurleyMessages;
+    public string[] OtherMessages;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +51,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void scroll()
     {
-        scroller.transform.Translate(Vector2.left * Time.deltaTime * scrollspeed);
+        scroller.transform.Translate(Vector2.left * Time.deltaTime * timeScale * scrollspeed);
     }
 
     // Update is called once per frame
@@ -55,6 +63,18 @@ public class GameManager : MonoBehaviour
             setBars();
             scroll();
             auth = timeElapsed / 50; //debug
+
+            if (timeElapsed > nextMessageTime)
+            {
+                if (Random.Range(0,100) < 20)
+                {
+                    sendNewScrollingMessage(OtherMessages[Random.Range(0, OtherMessages.Length - 1)]);
+                    nextMessageTime = timeElapsed + 40;
+                } else
+                {
+                    nextMessageTime = timeElapsed + 10;
+                }
+            }
         }
 
     }
