@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public float auth;
 
     public GameObject infBar;
+    public GameObject authBar;
 
     public GameObject alertPrefab;
     // Start is called before the first frame update
