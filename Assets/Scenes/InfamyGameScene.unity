@@ -389,8 +389,8 @@ MonoBehaviour:
   authBar: {fileID: 792069872}
   scroller: {fileID: 898266465}
   scrollingContent: {fileID: 898266467}
-  scrollerHome: {x: 575, y: 505, z: 0}
-  scrollspeed: 50
+  scrollerHome: {x: 900, y: 505, z: 0}
+  scrollspeed: 100
   themeMusic: {fileID: 782998977}
   date: {fileID: 1675818558}
   day: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
   eventInfScaling: 0.01
   eventAuthScaling: 0.01
   passiveInfScaling: 0.001
-  passiveAuthScaling: 0.0004
+  passiveAuthScaling: 0.0007
   newDayMessages:
   - Meanest Man on Campus election in 10 days
   - Meanest Man on Campus election in 9 days
@@ -445,7 +445,7 @@ MonoBehaviour:
     a shots fired incedent. Please avoid the area.
   mask: {fileID: 9075249239549898322, guid: a6b13ae3cd41ed045b4b77a118bbeea9, type: 3}
   activeMaskers: []
-  targetMasked: 10000
+  targetMasked: 1000
   maskTime: 1
 --- !u!4 &221140138
 Transform:

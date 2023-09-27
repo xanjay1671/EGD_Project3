@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
     void sendNewScrollingMessage(string message)
     {
         scrollingContent.text = message;
-        scroller.transform.position = scrollerHome;
+        scroller.transform.position = new Vector3(scrollerHome.x, scroller.transform.position.y, scroller.transform.transform.position.z);
     }
 
     // Update is called once per frame
@@ -172,6 +172,13 @@ public class GameManager : MonoBehaviour
     {
         inf += infEventRewards[latestPopup][op-1] * eventInfScaling;
         auth += authEventRewards[latestPopup][op-1] * eventAuthScaling;
+        if (inf > auth)
+        {
+            sendNewScrollingMessage(MmocMessages[Random.Range(0, MmocMessages.Length - 1)]);
+        } else
+        {
+            sendNewScrollingMessage(GurleyMessages[Random.Range(0, GurleyMessages.Length - 1)]);
+        }
         currentPopup = false;
     }
 
@@ -222,6 +229,7 @@ public class GameManager : MonoBehaviour
             day++;
             string calcDate = "5/2" + day;
             date.text = calcDate;
+            sendNewScrollingMessage(newDayMessages[day]);
         }
         if (timeElapsed > 1000) endGame();
     }
