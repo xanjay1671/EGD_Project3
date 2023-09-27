@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Vector3 scrollerHome;
     public float scrollspeed;
 
+    public AudioSource themeMusic;
+
     public TMP_Text date;
     public int day = 0;
 
@@ -224,6 +226,11 @@ public class GameManager : MonoBehaviour
         if (timeElapsed > 1000) endGame();
     }
 
+    void pitchThemeMusic()
+    {
+        themeMusic.pitch = Mathf.Sqrt(1 + inf - auth);
+    }
+
     void endGame()
     {
         if (auth > inf) //lose
@@ -253,6 +260,7 @@ public class GameManager : MonoBehaviour
                 tryPopup();
                 maskify();
                 refreshDate();
+                pitchThemeMusic();
             }
         }
 
