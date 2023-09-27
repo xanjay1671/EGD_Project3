@@ -21,15 +21,19 @@ public class GameManager : MonoBehaviour
     public Vector3 scrollerHome;
     public float scrollspeed;
 
+    public TMP_Text date;
+    public int day = 0;
+
     public GameObject alertPrefab;
     public bool currentPopup = false;
     public GameObject myCanvas;
 
     public int latestPopup;
+    private float nextMessageTime = 10f;
 
-    public string[][] events;
-    public float[][] infEventRewards;
-    public float[][] authEventRewards;
+    private string[][] events;
+    private float[][] infEventRewards;
+    private float[][] authEventRewards;
 
     public float eventInfScaling;
     public float eventAuthScaling;
@@ -37,12 +41,18 @@ public class GameManager : MonoBehaviour
     public float passiveInfScaling;
     public float passiveAuthScaling;
 
-    private float nextMessageTime;
+    private float nextPopupTime;
 
     public string[] newDayMessages;
     public string[] MmocMessages;
     public string[] GurleyMessages;
     public string[] OtherMessages;
+
+    public GameObject mask;
+    public List<GameObject> activeMaskers;
+    private int maskCount = 0;
+    public float targetMasked = 1000f;
+    public float maskTime = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +92,7 @@ public class GameManager : MonoBehaviour
         authEventRewards[8] = new float[] { -1f, -1f };
         events[9] = new string[] { "A dog walks by", "Pet the dog", "Aggressively pet the dog", "Aggressively pet the dog until the sun sets" };
         infEventRewards[9] = new float[] { -2f, -5f -8f };
-        authEventRewards[9] = new float[] { -2f, -5f - 8f };
+        authEventRewards[9] = new float[] { -2f, -5f, - 8f };
 
         events[10] = new string[] { "Classes seem to be getting longer and more boring", "Let's take a nap" };
         infEventRewards[10] = new float[] { 0f };
@@ -111,6 +121,35 @@ public class GameManager : MonoBehaviour
     void scroll()
     {
         scroller.transform.Translate(Vector2.left * Time.deltaTime * timeScale * scrollspeed);
+    }
+
+    void spawnRandomMask()
+    {
+        Vector3 newpos = new Vector3(Random.Range(-9.6f, 9.6f), Random.Range(-5.4f, 5.4f), 0);
+        GameObject child = Instantiate(mask, newpos, transform.rotation);
+        activeMaskers.Add(child);
+    }
+
+    void destroyRandomMask()
+    {
+        activeMaskers.RemoveAt(Random.Range(0, activeMaskers.Count - 1));
+    }
+
+    void maskify()
+    {
+        //if (timeElapsed > maskTime) {
+        //    maskTime = timeElapsed + 1f;
+        if (maskCount + 1 < targetMasked * inf)
+        {
+            spawnRandomMask();
+            maskCount++;
+        }
+        if (maskCount - 1 > targetMasked * inf)
+        {
+            destroyRandomMask();
+            maskCount--;
+        }
+        //}
     }
 
     void spawnPopup()
@@ -152,17 +191,48 @@ public class GameManager : MonoBehaviour
 
     void tryPopup()
     {
-        if (!currentPopup && timeElapsed > 3f)
+        if (!currentPopup && timeElapsed > nextPopupTime)
         {
-            spawnPopup();
-            currentPopup = true;
+            if (Random.Range(0, 100) < 20)
+            {
+                spawnPopup();
+                currentPopup = true;
+                nextPopupTime = timeElapsed + 40;
+            }
+            else
+            {
+                nextPopupTime = timeElapsed + 10;
+            }
         }
     }
 
     void passiveIncrease()
     {
+        if (inf < 0) inf = 0;
+        if (auth < 0) auth = 0;
         inf += .01f * passiveInfScaling;
         auth += .05f * inf * passiveAuthScaling;
+    }
+
+    void refreshDate()
+    {
+        if ((int)timeElapsed / 100 > day) {
+            day++;
+            string calcDate = "5/2" + day;
+            date.text = calcDate;
+        }
+        if (timeElapsed > 1000) endGame();
+    }
+
+    void endGame()
+    {
+        if (auth > inf) //lose
+        {
+
+        } else //win
+        {
+
+        }
     }
 
     // Update is called once per frame
@@ -170,15 +240,20 @@ public class GameManager : MonoBehaviour
     {
         if (!paused)
         {
-            timeElapsed += Time.deltaTime * timeScale;
-            passiveIncrease();
             setBars();
-            scroll();
-            //auth = timeElapsed / 50; //debug
 
-            tryRandomMessage();
-            tryPopup();
+            if (!currentPopup)
+            {
+                timeElapsed += Time.deltaTime * timeScale;
+                passiveIncrease();
+                scroll();
+                //auth = timeElapsed / 50; //debug
 
+                tryRandomMessage();
+                tryPopup();
+                maskify();
+                refreshDate();
+            }
         }
 
     }

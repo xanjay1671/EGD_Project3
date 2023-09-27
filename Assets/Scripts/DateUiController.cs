@@ -48,7 +48,7 @@ public class DateUiController : MonoBehaviour
         {
             sped = true;
             speedButton.image.color = Color.gray;
-            gm.timeScale = 3f;
+            gm.timeScale = 5f;
 
         }
     }
