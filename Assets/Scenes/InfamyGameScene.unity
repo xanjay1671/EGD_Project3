@@ -512,6 +512,8 @@ MonoBehaviour:
   - 'Student stress continues to build up after work load increases, a vicious cycle. '
   - 'Classes canceled due to weather concerns, cheers resound through the dormitories. '
   - 'CS student accidentally deletes his assignment code, immediately drops out. '
+  - RPI ALERT Troy PD is currently on scene in the area of 3rd and Congress investigating
+    a shots fired incedent. Please avoid the area.
 --- !u!4 &221140138
 Transform:
   m_ObjectHideFlags: 0
