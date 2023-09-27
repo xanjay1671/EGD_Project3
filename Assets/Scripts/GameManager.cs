@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         infEventRewards[8] = new float[] { 0f, 0f };
         authEventRewards[8] = new float[] { -1f, -1f };
         events[9] = new string[] { "A dog walks by", "Pet the dog", "Aggressively pet the dog", "Aggressively pet the dog until the sun sets" };
-        infEventRewards[9] = new float[] { -2f, -5f -8f };
+        infEventRewards[9] = new float[] { -2f, -5f, -8f };
         authEventRewards[9] = new float[] { -2f, -5f, -8f };
 
         events[10] = new string[] { "Classes seem to be getting longer and more boring", "Let's take a nap" };
