@@ -164,9 +164,9 @@ MonoBehaviour:
   m_text: "There's only room for one mischief making mean machine on campus, and
     that's you, Sisman. \n\nMeanest Man on Campus has been around for years, now
     it's time to bring it back the only way you know how, by causing mayhem and merriment.\n\nYour
-    Goal: Accumulate an absurd amount of votes, and be elected Meanest Man on Campus.\n\nYour
-    Obstacle: President Gurley Jan Flaxon is on the look out for rotten rapscallions
-    like you, get mean but don't get caught green."
+    Goal: You have 10 days to be elected Meanest Man on Campus.\n\nYour Obstacle:
+    President Gurley Jan Flaxon is on the look out for rotten rapscallions like you,
+    get mean but don't get caught green."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
   m_sharedMaterial: {fileID: 1711263779620495218, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
+  m_fontSize: 28.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1221,8 +1221,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1011931945}
-        m_TargetAssemblyTypeName: sceneSwitcher, Assembly-CSharp
+      - m_Target: {fileID: 2060738865}
+        m_TargetAssemblyTypeName: startScreenController, Assembly-CSharp
         m_MethodName: loadInfamy
         m_Mode: 1
         m_Arguments:
@@ -1900,8 +1900,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1011931945}
-        m_TargetAssemblyTypeName: sceneSwitcher, Assembly-CSharp
+      - m_Target: {fileID: 2060738865}
+        m_TargetAssemblyTypeName: startScreenController, Assembly-CSharp
         m_MethodName: turnOffEndScreen
         m_Mode: 1
         m_Arguments:

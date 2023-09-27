@@ -1707,7 +1707,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OMG HI! I'm way too long to fit!
+  m_text: 'Today in RPI News: Glump, Puckman, and Sisman caught studying without
+    a liscense.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
   m_sharedMaterial: {fileID: 1711263779620495218, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}

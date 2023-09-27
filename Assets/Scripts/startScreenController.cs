@@ -54,4 +54,22 @@ public class startScreenController : MonoBehaviour
         }
           
     }
+
+    public void loadStart()
+    {
+        sceneSwitcher.Instance.loadStart();
+    }
+
+    public void loadInfamy()
+    {
+        sceneSwitcher.Instance.loadInfamy();
+    }
+
+    public void turnOffEndScreen()
+    {
+        sceneSwitcher.Instance.turnOffEndScreen();
+    }
+
+
+
 }
