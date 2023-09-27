@@ -161,12 +161,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "There's only room for one mischief making mean machine on campus, and
-    that's you, Sisman. \n\nMeanest Man on Campus has been around for years, now
-    it's time to bring it back the only way you know how, by causing mayhem and merriment.\n\nYour
-    Goal: You have 10 days to be elected Meanest Man on Campus.\n\nYour Obstacle:
-    President Gurley Jan Flaxon is on the look out for rotten rapscallions like you,
-    get mean but don't get caught green."
+  m_text: "Do you think you have what it takes to be the meanest man on campus? If
+    so, it's time to put that to the test. This year\u2019s annual MMOC competition
+    is just getting started, so come and take the crown if you can.\r\n\t\nTo win
+    the vote that will take place in two weeks, commit evil deeds and spread your
+    infamy throughout the campus and beat the other competitors. But you have to
+    stay sharp. \n\nTry your best not to catch \u201CHer\u201D eyes, or things will
+    get difficult.\r\n\tWell, no point wasting any more time. Let's see what you
+    can do.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
   m_sharedMaterial: {fileID: 1711263779620495218, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
@@ -193,7 +195,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.2
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -259,8 +261,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30.5791}
-  m_SizeDelta: {x: 914.9192, y: 366.7227}
+  m_AnchoredPosition: {x: -3.0139, y: 58.3694}
+  m_SizeDelta: {x: 840.5767, y: 311.1422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &134718507
 GameObject:
@@ -524,9 +526,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You have officially been voted the Meanest Man on Campus! \n\nThe tradition
-    will continue to live on, giving all upcoming students and faculty the engineer
-    spirit!\n\nCongratulations and thanks for playing!"
+  m_text: "As the winner and newly crowned Meanest Man on Campus, I want to thank
+    my parents for raising and supporting me. I want to thank my teachers for guiding
+    and showing me the right way. I also want to thank all of my fellow students
+    and those who voted and cheered me on. Of course, I don\u2019t mean anything
+    I just said.\r\n\t\nI never really cared about this competition and was just
+    bored from classes. Honestly, it wasn\u2019t that hard to get to stand up here.
+    It was a pretty useless competition with the only reward being a participation
+    prize and having to stand here and speak to all you losers.\r\n\nCongratulations
+    and thanks for playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
   m_sharedMaterial: {fileID: 1711263779620495218, guid: 238606a5d21d45c4c90e85eeb9850f04, type: 2}
@@ -553,7 +561,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 21.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2794,7 +2802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2131566276
 RectTransform:
   m_ObjectHideFlags: 0
