@@ -11,6 +11,7 @@ public class PopupManager : MonoBehaviour
     public Button button1;
     public Button button2;
     public Button button3;
+    public GameObject gb1, gb2, gb3;
 
     public TMP_Text question, option1, option2, option3;
 
@@ -37,7 +38,7 @@ public class PopupManager : MonoBehaviour
         option1.text = dialogue[1];
         if (dialogue.Length <= 2)
         {
-            button2.GetComponentInParent<GameObject>().SetActive(false);
+            gb2.SetActive(false);
         } else
         {
             option2.text = dialogue[2];
@@ -45,7 +46,7 @@ public class PopupManager : MonoBehaviour
 
         if (dialogue.Length <= 3)
         {
-            button3.GetComponentInParent<GameObject>().SetActive(false);
+            gb3.SetActive(false);
         }
         else
         {
@@ -56,7 +57,7 @@ public class PopupManager : MonoBehaviour
     void respondWithOption(int option)
     {
         gm.acceptResponse(option);
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     //public IEnumerator startScaleup()

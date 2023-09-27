@@ -54,6 +54,9 @@ MonoBehaviour:
   button1: {fileID: 3523314277395621701}
   button2: {fileID: 2074792740192378341}
   button3: {fileID: 8078404112212651344}
+  gb1: {fileID: 6089117073939839570}
+  gb2: {fileID: 5156729994515272601}
+  gb3: {fileID: 4380816689751401598}
   question: {fileID: 6562228042426131609}
   option1: {fileID: 819693783573542065}
   option2: {fileID: 2231170806489683779}
@@ -659,7 +662,7 @@ RectTransform:
   m_GameObject: {fileID: 6376016069911586294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3589922683678842591}
@@ -868,7 +871,7 @@ RectTransform:
   m_GameObject: {fileID: 7426560597939377961}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5718490777903253238}
@@ -1002,7 +1005,7 @@ RectTransform:
   m_GameObject: {fileID: 9220461189767436196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1636162785437016770}
