@@ -243,12 +243,18 @@ public class GameManager : MonoBehaviour
     {
         if (auth > inf) //lose
         {
+            sceneSwitcher.Instance.loadEnd();
 
+            sceneSwitcher.Instance.gameWon = false;
         } else //win
         {
+            sceneSwitcher.Instance.loadEnd();
 
+            sceneSwitcher.Instance.gameWon = true;
         }
     }
+
+    
 
     // Update is called once per frame
     void Update()
